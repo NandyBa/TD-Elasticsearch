@@ -1,0 +1,12 @@
+{
+  "size": 0,
+  "aggs":{
+    "movies_years":{
+      "terms": {
+        "field": "fields.year"
+        
+      }
+      
+    }
+  }
+}

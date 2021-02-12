@@ -1,0 +1,10 @@
+{
+  "aggs":{
+    "movies_number_per_year":{
+      "terms": {
+        "field": "fields.year"
+      }
+      
+    }
+  }
+}
