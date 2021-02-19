@@ -1,0 +1,25 @@
+{
+  "query": {
+    "bool":{
+      "should":[
+        {
+          "match_phrase": {
+            "fields.actors": "Harrison Ford"
+          }
+        },
+        {
+          "match":{
+            "fields.plot":"Jones"
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "match":{
+            "fields.plot": "Nazis"
+          }
+        }
+      ]
+    }
+  }
+}
