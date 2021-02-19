@@ -1,0 +1,30 @@
+{
+  "query": {
+    "bool":{
+      "should":{
+        "match_phrase": {
+          "fields.directors": "James Cameron"
+        }
+      },
+      "must":{
+        "range":{
+          "fields.rating":{
+            "gt": 5
+          }
+        }
+      },
+      "must_not":[
+        {
+          "match": {
+            "fields.genres": "Action"
+          }
+        },
+        {
+          "match": {
+            "fields.genres": "Drama"
+          }
+        }
+      ]
+    }
+  }
+}
