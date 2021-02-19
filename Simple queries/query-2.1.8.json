@@ -1,0 +1,18 @@
+{
+  "query": {
+    "bool":{
+      "should":{
+        "match_phrase": {
+          "fields.directors": "James Cameron"
+        }
+      },
+      "must":{
+        "range":{
+          "fields.rating":{
+            "gt": 5
+          }
+        }
+      }
+    }
+  }
+}
