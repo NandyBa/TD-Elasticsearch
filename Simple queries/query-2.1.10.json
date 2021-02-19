@@ -1,0 +1,21 @@
+{
+  "query": {
+    "bool":{
+      "should":[
+        {
+          "match":{
+            "field.directors" : "J.J. Abrams"
+          }
+        },
+        {
+          "range":{
+            "fields.year":{
+              "gt": 2010,
+              "lt": 2015
+            }
+          }
+        }
+      ]
+    }
+  }
+}
