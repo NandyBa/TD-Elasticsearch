@@ -1,0 +1,8 @@
+{
+  "size":0,
+  "aggs":{
+    "avg_rating":{
+      "avg": { "field": "fields.rating"}
+    }
+  }
+}
