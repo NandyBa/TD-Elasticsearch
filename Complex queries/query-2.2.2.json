@@ -1,0 +1,19 @@
+{
+  "size":0,
+  "aggs": {
+    "genres":{
+      "terms":{ "field":"fields.genres.keyword"},
+      "aggs":{
+        "max_rating":{
+            "max": { "field": "fields.rating"}
+        },
+        "min_ratting":{
+            "min": { "field": "fields.rating"}
+        },
+        "avg_ratting":{
+            "avg": { "field": "fields.rating"}
+        }
+      }
+    }
+  }
+}
