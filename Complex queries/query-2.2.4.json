@@ -1,0 +1,8 @@
+{
+  "query": {
+    "match_phrase": { "fields.directors": "George Lucas"}},
+  "aggs":{ "note_moyenne":{
+      "avg": { "field": "fields.rating"}
+    }
+  }
+}
